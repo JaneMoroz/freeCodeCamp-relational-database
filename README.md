@@ -48,3 +48,70 @@
 21. `SELECT columns FROM table_1 FULL JOIN table_2 ON table_1.primary_key_column = table_2.foreign_key_column;`
 
 22. `INSERT INTO table_name(column_1, column_2) VALUES(value1, value2);`
+
+
+## ✨ Learn Bash Scripting by Building Five Programs
+1. `#!/bin/bash` - tell your program to use bash by placing a shebang at the very top of the file
+2. `./script.sh` - run script
+3. `-rw-r--r--`, `r` - means read, `w` - means write, `x` - means execute
+4. `chmod +x script.sh` - give everyone executable permissions
+
+5. `VARIABLE_NAME=VALUE`
+6. `$VARIABLE_NAME` - to use a variable
+7. `read VARIABLE_NAME`
+
+8. 
+```
+if [[ CONDITION ]]
+then
+  STATEMENTS
+fi
+```
+9. 
+```
+if [[ CONDITION ]]
+then
+  STATEMENTS
+else
+  STATEMENTS
+fi
+```
+```
+if (( CONDITION ))
+then
+  STATEMENTS
+elif [[ CONDITION ]]
+then
+  STATEMENTS
+fi
+```
+10. `-eq` - equal, `-ne` - not equal, `-lt` - less than, `-le` - less than or equal, `-gt` - greater than, `-ge` - greater than or equal
+11.
+```
+for (( i = 10; i > 0; i-- ))
+do
+  echo $i
+done
+```
+12.
+```
+while [[ CONDITION ]]
+do
+  STATEMENTS
+done
+```
+```
+until [[ CONDITION ]]
+do
+  STATEMENTS
+done
+```
+`(( I-- ))` - to subtract one from I on each pass.
+13. `$(( RANDOM % 6 ))` - get random number from 1 to 5
+14. 
+```
+FUNCTION_NAME() {
+  STATEMENTS
+}
+```
+15. `=~` - pattern matching
