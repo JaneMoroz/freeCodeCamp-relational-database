@@ -134,3 +134,24 @@ done
 ```
 4. `[[ -z $MAJOR_ID ]]` - not found condition, `[[ $MAJOR != major ]]` - first line in csv condition
 5. `TRUNCATE <table_1>, <table_2>;`
+
+## ✨ Learn SQL by Building a Student Database: Part 2
+1. `SELECT <columns> FROM <table_name> WHERE <condition>;` </br> `WHERE <condition_1> OR <condition_2>` `WHERE <condition_1> AND <condition_2>` `WHERE <condition_1> AND (<condition_2> OR <condition_2>)`
+2. `WHERE <column> LIKE '<pattern>'` `_` - a pattern will return rows that have any character in that spot. `%` - means anything can be there. </br>
+`SELECT * FROM courses WHERE course NOT LIKE '<pattern>';` </br>
+`ILIKE` - will ignore the case of the letters when matching
+2. `WHERE <column> IS NULL`
+3. `ORDER BY <column_name>`, `ASC` - ascending (ASC) order by default, `DESC` - descending order </br>
+`SELECT <columns> FROM <table> ORDER BY <column_1> DESC, <column_2>;`
+4. `LIMIT <number>` - to only get the amount you want
+5. `SELECT MIN(<column>) FROM <table>`, `SELECT MAX(gpa) FROM students;`, `SELECT SUM(major_id) FROM students;`, `SELECT AVG(major_id) FROM students;`
+6. `CEIL`, `FLOOR` - can round decimals up or down to the nearest whole number, `ROUND(<number_to_round>, <decimals_places>)`
+7. `COUNT(<column>)` - how many entries are in a table for the column
+8. `SELECT <column> FROM <table> GROUP BY <column>` - to select and group by column, you can add any of the aggregate functions (`MIN`, `MAX`, `COUNT`, etc) to it to find more information
+9. `HAVING`, `SELECT <column> FROM <table> GROUP BY <column> HAVING <condition>` - The condition must be an aggregate function with a test.
+10. `SELECT <column> AS <new_column_name>`
+11. `SELECT * FROM <table_1> FULL JOIN <table_2> ON <table_1>.<foreign_key_column> = <table_2>.<foreign_key_column>;`, `LEFT JOIN`, `INNER JOIN`, `RIGHT JOIN`, `DISTINCT` - to only return the unique ones. </br>
+Example: `SELECT DISTINCT(major) FROM students INNER JOIN majors ON students.major_id = majors.major_id;` - to only return the unique ones to see the list of majors who have students.
+12. `<table>.<column>`, `SELECT * FROM <table> AS <new_name>;`
+13. `SELECT * FROM <table_1> FULL JOIN <table_2> USING(<column>);` - to join tables if the foreign key column has the same name in both tables </br>
+`SELECT * FROM <table_1> FULL JOIN <table_2> USING(<column>) FULL JOIN <table_3> USING(<column>)`
