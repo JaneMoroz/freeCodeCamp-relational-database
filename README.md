@@ -115,3 +115,22 @@ FUNCTION_NAME() {
 }
 ```
 15. `=~` - pattern matching
+
+## ✨ Learn SQL by Building a Student Database: Part 1
+1. `$($PSQL "<query_here>")` - to query the database
+2. 
+```
+cat courses.csv | while read MAJOR COURSE
+do
+  <STATEMENTS>
+done
+```
+3. `IFS` - "Internal Field Separator"
+```
+cat courses.csv | while IFS="," read MAJOR COURSE
+do
+  echo $MAJOR
+done
+```
+4. `[[ -z $MAJOR_ID ]]` - not found condition, `[[ $MAJOR != major ]]` - first line in csv condition
+5. `TRUNCATE <table_1>, <table_2>;`
