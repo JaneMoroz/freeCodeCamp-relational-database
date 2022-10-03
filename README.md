@@ -155,3 +155,7 @@ Example: `SELECT DISTINCT(major) FROM students INNER JOIN majors ON students.maj
 12. `<table>.<column>`, `SELECT * FROM <table> AS <new_name>;`
 13. `SELECT * FROM <table_1> FULL JOIN <table_2> USING(<column>);` - to join tables if the foreign key column has the same name in both tables </br>
 `SELECT * FROM <table_1> FULL JOIN <table_2> USING(<column>) FULL JOIN <table_3> USING(<column>)`
+
+## 🔥 freeCodeCamp special:
+1. `pg_dump -cC --inserts -U freecodecamp database_name > database_name.sql`
+2. `psql -U postgres < database_name.sql`
